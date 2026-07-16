@@ -69,26 +69,26 @@
 
         F_layers {
             bindings = <
-&kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6        &kp F7            &kp F8          &kp F9            &kp F10     &kp F11
-&none    &none   &none   &none   &none   &trans  &kp HOME      &kp LA(P)         &kp UP_ARROW    &kp LG(UP_ARROW)  &trans      &trans
-&trans   &none   &none   &none   &none   &trans  &kp END       &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp LC(F4)  &kp RG(RIGHT)
-&trans   &trans  &trans  &trans  &trans  &none   &none         &none             &kp CAPS        &trans            &none       &trans
-&trans   &trans  &trans  &trans  &trans  &trans  &kp LG(LEFT)  &kp LA(UP_ARROW)  &kp ENTER       &trans            &trans      &trans
+&kp F12  &kp F1  &kp F2  &kp F3         &kp F4         &kp F5  &kp F6              &kp F7            &kp F8          &kp F9            &kp F10     &kp F11
+&none    &none   &none   &none          &none          &trans  &kp HOME            &kp LA(P)         &kp UP_ARROW    &kp LG(UP_ARROW)  &trans      &trans
+&trans   &none   &none   &none          &none          &trans  &kp END             &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp LC(F4)  &kp RG(RIGHT)
+&trans   &trans  &trans  &kp LC(LS(C))  &kp LC(LS(V))  &none   &none               &none             &kp CAPS        &trans            &none       &trans
+&trans   &trans  &trans  &trans         &trans         &trans  &kp LG(LEFT_ARROW)  &kp LA(UP_ARROW)  &kp ENTER       &trans            &trans      &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
         };
 
         BT_layers {
             bindings = <
-&trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader  &trans  &trans  &trans  &trans  &none
-&trans  &trans          &trans        &trans        &trans        &trans        &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans        &bt BT_CLR    &trans        &trans        &bt BT_NXT   &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans        &trans        &trans        &trans        &trans       &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader  &trans      &trans  &trans  &trans  &bt BT_CLR_ALL
+&trans      &trans        &trans        &trans        &trans        &trans        &trans       &trans      &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans       &bt BT_NXT  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans       &trans      &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans       &trans      &trans  &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };

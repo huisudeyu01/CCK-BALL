@@ -5,6 +5,10 @@ manifest:
     - name: DoctorWangWang
       url-base: https://github.com/DoctorWangWang
   projects:
+    - name: zmk-module-runtime-input-processor
+      remote: cormoran
+      revision: main # or latest commit hash
+    # Below setting required to use unofficial studio custom RPC feature
     - name: zmk
       remote: zmkfirmware
       revision: v0.3-branch
